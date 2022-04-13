@@ -5,13 +5,13 @@
         "laravel erd generator modules",
         "laravel-erd"
     ],
-    "homepage": "",
+    "homepage": "https://alltrons.com/",
     "license": "MIT",
     "version": "1.7",
     "authors": [
         {
             "name": "Eric Abraham",
-            "email": "ericabraham8@yahoo.com",
+            "email": "eric.abraham@alltrons.com",
             "role": "Developer"
         }
     ],
@@ -29,12 +29,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Alltrons\\LaravelERDModules\\": "src"
+            "Alltrons\\LaravelErdModules\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Alltrons\\LaravelERDModules\\Tests\\": "tests"
+            "Alltrons\\LaravelErdModules\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -48,10 +48,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Alltrons\\LaravelERDModules\\LaravelERDServiceProvider"
+                "Alltrons\\LaravelErdModules\\LaravelERDServiceProvider"
             ],
             "aliases": {
-                "LaravelERDModules": "Alltrons\\LaravelERDModules\\LaravelERDFacade"
+                "LaravelErdModules": "Alltrons\\LaravelErdModules\\LaravelERDFacade"
             }
         }
     },
