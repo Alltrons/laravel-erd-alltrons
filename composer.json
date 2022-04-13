@@ -29,12 +29,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Kevincobain2000\\LaravelERD\\": "src"
+            "Alltrons\\LaravelERDModules\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Kevincobain2000\\LaravelERD\\Tests\\": "tests"
+            "Alltrons\\LaravelERDModules\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -48,10 +48,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Kevincobain2000\\LaravelERD\\LaravelERDServiceProvider"
+                "Alltrons\\LaravelERDModules\\LaravelERDServiceProvider"
             ],
             "aliases": {
-                "LaravelERD": "Kevincobain2000\\LaravelERD\\LaravelERDFacade"
+                "LaravelERDModules": "Alltrons\\LaravelERDModules\\LaravelERDFacade"
             }
         }
     },
