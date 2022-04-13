@@ -2,6 +2,7 @@
 
 namespace Alltrons\LaravelErdModules\Commands;
 
+use Alltrons\LaravelErdModules\LaravelErdModules;
 use File;
 use Illuminate\Console\Command;
 
