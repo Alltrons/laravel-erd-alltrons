@@ -1,6 +1,6 @@
 <?php
 
-use Alltrons\LaravelERdModules\Controllers\LaravelErdModulesController;
+use Alltrons\LaravelErdModules\Controllers\LaravelErdModulesController;
 use Illuminate\Support\Facades\Route;
 
 /*
