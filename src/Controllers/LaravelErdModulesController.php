@@ -1,15 +1,15 @@
 <?php
 
-namespace Kevincobain2000\LaravelERD\Controllers;
+namespace Alltrons\LaravelERdModules\Controllers;
 
+use Alltrons\LaravelErdModules\LaravelErdModules;
 use Illuminate\Routing\Controller;
-use Kevincobain2000\LaravelERD\LaravelERD;
 
-class LaravelERDController extends Controller
+class LaravelErdModulesController extends Controller
 {
     private $laravelERD;
 
-    public function __construct(LaravelERD $laravelERD)
+    public function __construct(LaravelErdModules $laravelERD)
     {
         $this->laravelERD = $laravelERD;
     }

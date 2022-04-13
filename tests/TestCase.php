@@ -1,10 +1,9 @@
 <?php
 
-namespace Kevincobain2000\LaravelERD\Tests;
+namespace Alltrons\LaravelErdModules\Tests;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
+use Alltrons\LaravelErdModules\LaravelErdModulesServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Kevincobain2000\LaravelERD\LaravelERDServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -16,7 +15,7 @@ class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
-            LaravelERDServiceProvider::class,
+            LaravelErdModulesServiceProvider::class,
         ];
     }
 

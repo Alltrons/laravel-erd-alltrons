@@ -1,18 +1,18 @@
 <?php
 
-namespace Kevincobain2000\LaravelERD;
+namespace Alltrons\LaravelErdModules;
 
 use File;
-use Schema;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\Relation;
+use Illuminate\Database\QueryException;
 use ReflectionClass;
 use ReflectionMethod;
+use Schema;
 use Throwable;
 use TypeError;
-use Illuminate\Database\QueryException;
-use Illuminate\Database\Eloquent\Relations\Relation;
-use Illuminate\Database\Eloquent\Model;
 
-class LaravelERD
+class LaravelErdModules
 {
     public function getModelsNames(string $modelsPath)
     {
@@ -69,10 +69,10 @@ class LaravelERD
         return $nodeDataArray;
     }
 
-    function removeDuplicateModelNames($modelNames)
+    public function removeDuplicateModelNames($modelNames)
     {
         $finalModelNames = collect($modelNames)
-            ->map(function($modelName) {
+            ->map(function ($modelName) {
                 $model = app($modelName);
                 return [
                     'model_name' => $modelName,
@@ -87,7 +87,7 @@ class LaravelERD
 
     private function extractNamespace($file)
     {
-        $ns = NULL;
+        $ns = null;
         $handle = fopen($file, "r");
         if ($handle) {
             while (($line = fgets($handle)) !== false) {
@@ -134,10 +134,10 @@ class LaravelERD
                 $parentKey = $return->getQualifiedParentKeyName();
 
                 $relationships[$method->getName()] = [
-                    'type'        => $relationType,
-                    'model'       => $modelName,
+                    'type' => $relationType,
+                    'model' => $modelName,
                     'foreign_key' => $foreignKey,
-                    'parent_key'  => $parentKey,
+                    'parent_key' => $parentKey,
                 ];
             } catch (QueryException $e) {
                 // ignore
@@ -166,16 +166,16 @@ class LaravelERD
             }
 
             $nodeItems[] = [
-                "name"   => $column,
-                "isKey"  => $isPrimaryKey,
+                "name" => $column,
+                "isKey" => $isPrimaryKey,
                 "figure" => $isPrimaryKey ? "Hexagon" : "Decision",
-                "color"  => $isPrimaryKey ? "#be4b15" : "#6ea5f8",
-                "info"   => config('laravel-erd.display.show_data_type') ? Schema::getColumnType($model->getTable(), $column) : "",
+                "color" => $isPrimaryKey ? "#be4b15" : "#6ea5f8",
+                "info" => config('laravel-erd.display.show_data_type') ? Schema::getColumnType($model->getTable(), $column) : "",
             ];
         }
         return [
-            "key"    => $model->getTable(),
-            "schema" => $nodeItems
+            "key" => $model->getTable(),
+            "schema" => $nodeItems,
         ];
     }
 
@@ -195,17 +195,17 @@ class LaravelERD
             } else {
                 $isBelongsTo = ($relationship['type'] == "BelongsTo" || $relationship['type'] == "BelongsToMany");
                 $fromPort = $isBelongsTo ? $relationship["foreign_key"] : $relationship["parent_key"];
-                $toPort   = $isBelongsTo ? $relationship["parent_key"] : $relationship["foreign_key"];
+                $toPort = $isBelongsTo ? $relationship["parent_key"] : $relationship["foreign_key"];
             }
 
             $linkItems[] = [
-                "from"     => $fromTable,
-                "to"       => $toTable,
-                "fromText" => config('laravel-erd.from_text.'.$relationship['type']),
-                "toText"   => config('laravel-erd.to_text.'.$relationship['type']),
+                "from" => $fromTable,
+                "to" => $toTable,
+                "fromText" => config('laravel-erd.from_text.' . $relationship['type']),
+                "toText" => config('laravel-erd.to_text.' . $relationship['type']),
                 "fromPort" => explode(".", $fromPort)[1], //strip tablename
-                "toPort"   => explode(".", $toPort)[1],//strip tablename
-                "type"     => $relationship['type'],
+                "toPort" => explode(".", $toPort)[1], //strip tablename
+                "type" => $relationship['type'],
             ];
         }
         return $linkItems;

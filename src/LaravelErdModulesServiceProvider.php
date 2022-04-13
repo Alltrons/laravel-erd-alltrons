@@ -1,13 +1,12 @@
 <?php
 
-namespace Kevincobain2000\LaravelERD;
+namespace Alltrons\LaravelErdModules;
 
+use Alltrons\LaravelERdModules\Commands\LaravelErdModulesCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Kevincobain2000\LaravelERD\Commands\LaravelERDCommand;
-use Route;
 
-class LaravelERDServiceProvider extends PackageServiceProvider
+class LaravelErdModulesServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -15,7 +14,7 @@ class LaravelERDServiceProvider extends PackageServiceProvider
             ->name('laravel-erd')
             ->hasConfigFile('laravel-erd')
             ->hasViews()
-            ->hasCommand(LaravelERDCommand::class)
+            ->hasCommand(LaravelErdModulesCommand::class)
             ->hasRoutes('web');
     }
 }

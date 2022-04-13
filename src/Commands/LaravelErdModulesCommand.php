@@ -1,12 +1,12 @@
 <?php
 
-namespace Kevincobain2000\LaravelERD\Commands;
+namespace Alltrons\LaravelERdModules\Commands;
 
 use File;
 use Illuminate\Console\Command;
 use Kevincobain2000\LaravelERD\LaravelERD;
 
-class LaravelERDCommand extends Command
+class LaravelErdModulesCommand extends Command
 {
     public $signature = 'erd:generate {--m|modules=* : Defines which modules to be used when generating schema. None by default}';
 

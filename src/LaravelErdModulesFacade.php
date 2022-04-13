@@ -1,13 +1,13 @@
 <?php
 
-namespace Kevincobain2000\LaravelERD;
+namespace Alltrons\LaravelErdModules;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
  * @see \Kevincobain2000\LaravelERD\LaravelERD
  */
-class LaravelERDFacade extends Facade
+class LaravelErdModulesFacade extends Facade
 {
     protected static function getFacadeAccessor()
     {

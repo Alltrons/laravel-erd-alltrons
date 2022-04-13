@@ -48,10 +48,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Alltrons\\LaravelErdModules\\LaravelERDServiceProvider"
+                "Alltrons\\LaravelErdModules\\LaravelErdModulesServiceProvider"
             ],
             "aliases": {
-                "LaravelErdModules": "Alltrons\\LaravelErdModules\\LaravelERDFacade"
+                "LaravelErdModules": "Alltrons\\LaravelErdModules\\LaravelErdModulesFacade"
             }
         }
     },

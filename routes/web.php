@@ -1,7 +1,7 @@
 <?php
 
+use Alltrons\LaravelERdModules\Controllers\LaravelErdModulesController;
 use Illuminate\Support\Facades\Route;
-use Kevincobain2000\LaravelERD\Controllers\LaravelERDController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,8 +12,8 @@ use Kevincobain2000\LaravelERD\Controllers\LaravelERDController;
 | routes are loaded by your package ServiceProvider within a group which
 | contains the "web" middleware group.
 |
-*/
+ */
 
-Route::get(config('laravel-erd.url'), [LaravelERDController::class, 'index'])
+Route::get(config('laravel-erd.url'), [LaravelErdModulesController::class, 'index'])
     ->name('laravel-erd.index')
     ->middleware(config('laravel-erd.middlewares'));

@@ -1,8 +1,8 @@
 <?php
 
-namespace Kevincobain2000\LaravelERD\Tests;
+namespace Alltrons\LaravelErdModules\Tests;
 
-class LaravelERDTest extends TestCase
+class LaravelErdMoodulesTest extends TestCase
 {
     /** @test */
     public function true_is_true()
