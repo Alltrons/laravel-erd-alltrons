@@ -1,10 +1,9 @@
 <?php
 
-namespace Alltrons\LaravelERdModules\Commands;
+namespace Alltrons\LaravelErdModules\Commands;
 
 use File;
 use Illuminate\Console\Command;
-use Kevincobain2000\LaravelERD\LaravelERD;
 
 class LaravelErdModulesCommand extends Command
 {
@@ -14,7 +13,7 @@ class LaravelErdModulesCommand extends Command
 
     protected $laravelERD;
 
-    public function __construct(LaravelERD $laravelERD)
+    public function __construct(LaravelErdModules $laravelERD)
     {
         $this->laravelERD = $laravelERD;
         parent::__construct();

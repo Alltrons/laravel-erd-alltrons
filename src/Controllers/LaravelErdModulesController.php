@@ -1,6 +1,6 @@
 <?php
 
-namespace Alltrons\LaravelERdModules\Controllers;
+namespace Alltrons\LaravelErdModules\Controllers;
 
 use Alltrons\LaravelErdModules\LaravelErdModules;
 use Illuminate\Routing\Controller;
