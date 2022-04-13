@@ -1,18 +1,17 @@
 {
-    "name": "kevincobain2000/laravel-erd",
-    "description": "A tool to automatically generate interactive ERD relationships in Models for Laravel",
+    "name": "alltrons/laravel-erd-modules",
+    "description": "A tool to automatically generate interactive ERD relationships in Models for Laravel, upgrated to work for modules",
     "keywords": [
-        "kevincobain2000",
-        "laravel erd generator",
+        "laravel erd generator modules",
         "laravel-erd"
     ],
-    "homepage": "https://github.com/kevincobain2000/laravel-erd",
+    "homepage": "",
     "license": "MIT",
-    "version": "1.6",
+    "version": "1.7",
     "authors": [
         {
-            "name": "Pulkit Kathuria",
-            "email": "kevincobain2000@gmail.com",
+            "name": "Eric Abraham",
+            "email": "ericabraham8@yahoo.com",
             "role": "Developer"
         }
     ],
