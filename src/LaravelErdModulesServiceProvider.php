@@ -2,7 +2,7 @@
 
 namespace Alltrons\LaravelErdModules;
 
-use Alltrons\LaravelERdModules\Commands\LaravelErdModulesCommand;
+use Alltrons\LaravelErdModules\Commands\LaravelErdModulesCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
